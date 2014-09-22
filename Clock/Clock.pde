@@ -43,7 +43,80 @@ void draw () {
     }
   }
 
-  println("rows: " + numberOfRows);
-  println("columns: " + numberOfColumns);
+  //  if (numberOfRows == 2) {
+  //    for (int x = gridSizeX; x <= gridSizeX*10; x += gridSizeX) {
+  //      for (int y = gridSizeY; y <= gridSizeY*1; y += gridSizeY) {
+  //        noStroke();
+  //        fill(255);
+  //        rect(x-1, y-1, 5, 5);
+  //        stroke(255, 50);
+  //      }
+  //    }
+  //  }
+  //  if (numberOfRows == 3) {
+  //    for (int x = gridSizeX; x <= gridSizeX*10; x += gridSizeX) {
+  //      for (int y = gridSizeY; y <= gridSizeY*2; y += gridSizeY) {
+  //        noStroke();
+  //        fill(255);
+  //        rect(x-1, y-1, 5, 5);
+  //        stroke(255, 50);
+  //      }
+  //    }
+  //  }
+  //
+  //  if (numberOfRows == 4) {
+  //    for (int x = gridSizeX; x <= gridSizeX*10; x += gridSizeX) {
+  //      for (int y = gridSizeY; y <= gridSizeY*3; y += gridSizeY) {
+  //        noStroke();
+  //        fill(255);
+  //        rect(x-1, y-1, 5, 5);
+  //        stroke(255, 50);
+  //      }
+  //    }
+  //  }
+  //
+  //  if (numberOfRows == 5) {
+  //    for (int x = gridSizeX; x <= gridSizeX*10; x += gridSizeX) {
+  //      for (int y = gridSizeY; y <= gridSizeY*4; y += gridSizeY) {
+  //        noStroke();
+  //        fill(255);
+  //        rect(x-1, y-1, 5, 5);
+  //        stroke(255, 50);
+  //      }
+  //    }
+  //  }
+  //
+  //  if (numberOfRows == 6) {
+  //    for (int x = gridSizeX; x <= gridSizeX*10; x += gridSizeX) {
+  //      for (int y = gridSizeY; y <= gridSizeY*5; y += gridSizeY) {
+  //        noStroke();
+  //        fill(255);
+  //        rect(x-1, y-1, 5, 5);
+  //        stroke(255, 50);
+  //      }
+  //    }
+  //  }
+
+  for (int j = 0; j < 7; j++) {
+    if (numberOfRows == j) {
+      for (int x = gridSizeX; x <= gridSizeX*10; x += gridSizeX) {
+        for (int y = gridSizeY; y <= gridSizeY*(j-1); y += gridSizeY) {
+          noStroke();
+          fill(255);
+          rect(x-1, y-1, 5, 5);
+          stroke(255, 50);
+        }
+      }
+    }
+  }
+
+  for (int x = gridSizeX; x <= gridSizeX*numberOfColumns; x += gridSizeX) {
+    for (int y = gridSizeY; y <= gridSizeY*numberOfRows; y += gridSizeY) {
+      noStroke();
+      fill(255);
+      rect(x-1, y-1, 5, 5);
+      stroke(255, 50);
+    }
+  }
 }
 
